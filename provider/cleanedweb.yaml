@@ -1,0 +1,29 @@
+identity:
+  author: cleanedweb
+  name: cleanedweb
+  label:
+    en_US: CleanedWeb website APIs
+  description:
+    en_US: Search the CleanedWeb catalog of maintained website APIs, read an API's inputs, output fields and sample records, and run it for structured records. Finding and reading are free; runs are charged per record delivered.
+  icon: icon.svg
+  tags:
+    - search
+    - business
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: CleanedWeb API key
+    placeholder:
+      en_US: Paste an API key with the run scope
+    help:
+      en_US: Create a key under API keys in the CleanedWeb console. New workspaces get 5,000 records free, then prepaid credit from $1 per 1,000 records.
+    url: https://app.cleanedweb.com/?utm_source=dify&utm_medium=plugin
+tools:
+  - tools/find_api.yaml
+  - tools/get_api.yaml
+  - tools/run_api.yaml
+extra:
+  python:
+    source: provider/cleanedweb.py

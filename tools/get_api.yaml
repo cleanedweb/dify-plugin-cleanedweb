@@ -1,0 +1,31 @@
+identity:
+  name: get_api
+  author: cleanedweb
+  label:
+    en_US: Show a website API
+description:
+  human:
+    en_US: Show one catalog API's inputs, output fields and a few saved sample records. Free; nothing runs.
+  llm: "Free; nothing runs. Shows one CleanedWeb catalog API: per endpoint its inputs (with allowed values and examples), its output fields, and up to three sample records saved when the API was accepted (not a live run). Call it before run_api to learn the input names."
+parameters:
+  - name: api_id
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: API ID
+    human_description:
+      en_US: The api_id (generated_...) or slug that Find a website API returned.
+    llm_description: The api_id (generated_...) or slug that find_api returned.
+  - name: endpoint_id
+    type: string
+    required: false
+    form: llm
+    label:
+      en_US: Endpoint ID
+    human_description:
+      en_US: Optional. Only this endpoint; leave empty for all of them.
+    llm_description: Optional endpoint_id to show only that endpoint. Leave out for all of them.
+extra:
+  python:
+    source: tools/get_api.py

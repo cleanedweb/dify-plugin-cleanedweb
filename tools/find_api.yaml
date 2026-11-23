@@ -1,0 +1,60 @@
+identity:
+  name: find_api
+  author: cleanedweb
+  label:
+    en_US: Find a website API
+description:
+  human:
+    en_US: Search the CleanedWeb catalog of ready-made website APIs by topic, website or the fields you need. Free; nothing runs.
+  llm: "Free; nothing runs. Searches the CleanedWeb catalog of maintained APIs that return structured records from public websites (listings, products, jobs, repositories, property, reviews and more). Ranks APIs by topic words and the output fields you need; site and category narrow the search. Returns api_id, endpoint_id, the site and key fields, best first. Use few words, then call get_api to learn the inputs before run_api."
+parameters:
+  - name: query
+    type: string
+    required: false
+    form: llm
+    label:
+      en_US: Topic
+    human_description:
+      en_US: A few topic words, such as "github repositories" or "used cars".
+    llm_description: Topic words, such as "github repositories" or "used cars". Few words work best.
+  - name: site
+    type: string
+    required: false
+    form: llm
+    label:
+      en_US: Website
+    human_description:
+      en_US: Optional. A website domain or name, such as github.com.
+    llm_description: Optional website domain or name, such as "github.com".
+  - name: fields
+    type: string
+    required: false
+    form: llm
+    label:
+      en_US: Fields you need
+    human_description:
+      en_US: Optional. Output fields, comma-separated, such as "title, price". APIs that return them rank first.
+    llm_description: Optional output fields you need, comma-separated, such as "title, price". APIs that list them rank first.
+  - name: category
+    type: string
+    required: false
+    form: llm
+    label:
+      en_US: Category
+    human_description:
+      en_US: Optional. A catalog category, such as real_estate.
+    llm_description: Optional catalog category, such as "real_estate".
+  - name: limit
+    type: number
+    required: false
+    default: 10
+    min: 1
+    max: 50
+    form: form
+    label:
+      en_US: Matches to list
+    human_description:
+      en_US: How many matching APIs to return (1-50).
+extra:
+  python:
+    source: tools/find_api.py

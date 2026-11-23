@@ -1,0 +1,36 @@
+version: 0.1.0
+type: plugin
+author: cleanedweb
+name: cleanedweb
+label:
+  en_US: CleanedWeb website APIs
+description:
+  en_US: Structured records from public websites (listings, products, jobs, repositories, property, reviews) through maintained catalog APIs. Find an API, read its inputs and sample records for free, then run it; runs are charged per record delivered.
+icon: icon.svg
+created_at: "2026-11-23T09:00:00Z"
+resource:
+  memory: 268435456
+plugins:
+  tools:
+    - provider/cleanedweb.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 1.0.0
+tags:
+  - search
+  - business
+privacy: PRIVACY.md
+repo: https://github.com/cleanedweb/dify-plugin-cleanedweb
+contact: info@cleanedweb.com
+network:
+  domains:
+    - api.cleanedweb.com
+    - app.cleanedweb.com
+    - cleanedweb.com
