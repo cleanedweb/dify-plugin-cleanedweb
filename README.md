@@ -1,4 +1,8 @@
+<p align="center"><img src="https://cleanedweb.com/assets/logo.png" width="72" alt="CleanedWeb"></p>
+
 # CleanedWeb website APIs for Dify
+
+[![Dify Marketplace](https://img.shields.io/badge/Dify-Marketplace-1c64f2)](https://marketplace.dify.ai/plugin/cleanedweb/cleanedweb) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/cleanedweb/dify-plugin-cleanedweb/blob/main/LICENSE)
 
 Structured records from public websites in Dify workflows, chatflows and agents. [CleanedWeb](https://cleanedweb.com/?utm_source=dify&utm_medium=plugin)
 keeps a catalog of maintained APIs: each one returns the same fields from one website (listings, products, jobs,
