@@ -4,10 +4,15 @@
 
 [![Dify Marketplace](https://img.shields.io/badge/Dify-Marketplace-1c64f2)](https://marketplace.dify.ai/plugin/cleanedweb/cleanedweb) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/cleanedweb/dify-plugin-cleanedweb/blob/main/LICENSE)
 
-Structured records from public websites in Dify workflows, chatflows and agents. [CleanedWeb](https://cleanedweb.com/?utm_source=dify&utm_medium=plugin)
-keeps a catalog of maintained APIs: each one returns the same fields from one website (listings, products, jobs,
-repositories, property, reviews and more) and is repaired when the site changes. This plugin lets Dify find an API,
-read its inputs and sample records, and run it.
+**Scrapers break whenever a site changes its pages.** CleanedWeb is a catalog of maintained REST APIs
+for public websites (listings, products, jobs, articles, profiles): you call an API and get structured
+records with known fields. When a site changes, CleanedWeb rebuilds its API.
+
+This plugin brings [CleanedWeb](https://cleanedweb.com/?utm_source=dify&utm_medium=plugin) to Dify workflows, chatflows and agents.
+
+- Find an API by topic, website, category or the fields you need (free).
+- See its inputs, output fields and saved sample records before you spend anything (free).
+- Run it and get its records, whether they passed their checks, and the units charged.
 
 Source: https://github.com/cleanedweb/dify-plugin-cleanedweb
 
